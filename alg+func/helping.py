@@ -1,0 +1,1 @@
+#{% include 'main/test.html' %}  Вставляет файл на сайт
