@@ -156,7 +156,6 @@ header a {
     text-align: center;
     font-family: Roboto;
     font-size: 24px;
-    text-align: center;
     font-weight: 600;
     padding-bottom: 0px;
 }
@@ -164,39 +163,12 @@ header a {
 .post {
     color: black;
     padding: 5px;
-    text-align: center;
     font-family: Roboto;
     font-size: 18px;
     text-align: center;
     font-style: italic;
     padding-top: 0px;
 }
-
-.container {
-    box-sizing: border-box;
-    max-width: 1219px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 55px;
-    padding-right: 55px;
-  }
-
-.jum__message {
-    font-family: Roboto;
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 56px;
-    text-align: center;
-    color: #fff;
-  }
-  
-.jum {
-    padding-top: 128px;
-    padding-bottom: 128px;
-    background-image: url('img/(4).png');
-    background-size: cover;
-    background-position: center center;
-  }
 
 
 .end {
