@@ -2,26 +2,24 @@ body {
     background: rgba(78, 124, 152, 0.676);
 }
 
-.sidebar  {
-    height: 100vh; 
+aside {
+    float: left;
+    background: #181818;
     width: 20%;
-    background-color: #181818;; 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
     padding: 2.5%;
-    color: #f0f0f0;
+    height: 100vh;
+    color: #fff;
     border-right: 5px solid rgb(36, 33, 33);
 
 
 }
 
-.sidebar  img {
+aside img {
     width: 150px;
     float: left;
 }
 
-.sidebar  .logo {
+aside .logo {
     font-size: 40 px;
     margin-left: 10px;
     font-weight: bold;
@@ -29,25 +27,25 @@ body {
     top: +43px
 }
 
-.sidebar  h3 {
+aside h3 {
     margin-top: 50px;
     font-size: 30px;
 
 }
 
-.sidebar  ul {
+aside ul {
     list-style: None;
 }
 
-.sidebar  ul li{
-    color: #f0f0f0;
+aside ul li{
+    color: #fff;
     display: block;
     margin-top: 20px;
     transition: transform .6s ease;
 }
-.sidebar  ul a{text-decoration: none}
+aside ul a{text-decoration: none}
 
-.sidebar  ul li:hover, saide ul a:hover {
+aside ul li:hover, saide ul a:hover {
     color: #4a96d3;
     text-decoration: none;
     transform: scale(1.05);
@@ -55,42 +53,26 @@ body {
 
 main .features {
     float: left;
-    color: #f0f0f0;
+    color: #fff;
     margin-top: 100px;
     text-align: center;
     width: 75%;
-    margin-left: 20%;;
 }
 
-
-
-
-main .features h1 {
-    font-size: 50px;
-}
-main .features p {
-    max-width: 800px;
-    margin: 20px auto;
-}
-
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 800px; margin: 20px}
 
 .alert-warning {
     float: left;
     clear: both;
     width: 400px;
     margin: 20px 34%;
-}
-
-.alert-warning a {
-    text-align: center;
+    text-align: left;
 }
 
 form {
-    /* margin-left: 20%; */
-    margin: 0 auto;
+    margin-left: 32%;
     width: 500px;
     margin-top: 50px;
     margin-bottom: 100px
 }
-
-
