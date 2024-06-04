@@ -4,18 +4,27 @@ class EventEmitter {
   }
   
   subscribe(key, func) {
-    if (this.counter[key] == undefined) {
-      this.counter.set(key, []);
+    this.key = key
+    if ( (!(this.counter.has(this.key))) ) {
+        this.counter.set(this.key, []);
     }
-    this.counter.get(key).push(func)
+    this.counter.get(this.key).push(func)
     return {
       unsubscribe: () => {
-        this.counter.get(key).pop()
-        return 
+        let index = this.counter.get(this.key).indexOf(func)
+        this.counter.get(this.key).splice(index, 1)
       }
     }
   }
-  emit(key, argsfunc = []) {
-      
+  emit(k, argsfunc = []) {
+    if (this.counter.has(k)) {
+      let res = []
+      for (let j of this.counter.get(k)) {
+          res.push(j.apply(null, argsfunc))
+      }
+      return res
+    } else {return []}
   }
 }
+
+
