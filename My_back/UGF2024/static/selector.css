@@ -1,0 +1,217 @@
+ /* Анимация выезжания  */
+@keyframes slidiIn {
+   0% {
+      opacity: 0;
+      left: 60vw;
+
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+/* Анимация уезжания  */
+ @keyframes slidiOut { 
+   0% {
+      opacity: 1;
+      
+
+    }
+    100% {
+      opacity: 0;
+      left: 60vw;
+    }
+ }
+.Chooser {
+   /* Анимации */
+   .image-animate {
+      animation: slidiIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+   .image-animate-out {
+      animation: slidiOut 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Панель кнопок */
+   
+   .header {
+      font-size: 3vw;
+      text-align: center;
+   }
+   .character-panel {
+      margin: auto 20vw;
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+   }
+   .character-card {
+      text-align: center;
+      font-size: 1.6vw;
+      cursor: pointer
+   }
+   .character-card img{
+      height: 5vw;
+      width: auto;
+   }
+
+   .button-img{
+      transition: filter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+   }
+
+   .button-img.shadow{
+      filter: drop-shadow(0px 0.4vw 0 black);
+   }
+   
+
+   /* Все что ниже кнопок */
+
+
+   /* diamond-panel */
+   .diamond-panel {
+      z-index: 5;
+      position: relative;
+      width: 8.3vw; /* Ширина большего ромба */
+      height: 8.3vw; /* Высота большего ромба */
+      margin-top: 5w; /* Центрирование по горизонтали */
+      margin-left: 10vw;
+      margin-bottom: 10wv;
+      /* Стили для изменения цвета SVG */
+    
+      .diamond-btn {
+         position: absolute;
+         width: 6.5vw; /* Ширина большего ромба */
+         height: 6.5vw; /* Высота большего ромба */
+         transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+         
+      }
+      
+
+      .btn1 {
+         top: 0;
+         left: 50%;
+         transform-origin: bottom center;
+      }
+
+      .btn2 {
+         top: 50%;
+         left: 100%;
+         transform-origin: center left;
+      }
+      
+      .btn3 {
+         top: 100%;
+         left: 50%;
+         transform-origin: top center;
+      }
+      
+      .btn4 {
+         top: 50%;
+         left: 0;
+         transform-origin: center right;
+      }
+      .btn1.active{
+         transform: scale(1.6);
+         filter: drop-shadow(0 0.25vw 0 black);
+      }
+      .btn1.active path {
+         fill: rgba(173, 56, 23, 1); /* Цвет кнопки при нажатии */
+      }
+
+      .btn2.active {
+         transform: scale(1.6);
+         filter: drop-shadow(-0.2vw 0 0 black) ;
+      }
+      .btn2.active path {
+         fill: rgba(125, 121, 112, 1);
+      }
+      
+      .btn3.active {
+         transform: scale(1.6);
+         filter: drop-shadow(0 -0.2vw 0 black);
+      }
+      .btn3.active path{
+         fill: rgba(188, 209, 172, 1);
+
+      }
+      
+      .btn4.active {
+         transform: scale(1.6);
+         filter: drop-shadow(0.2vw 0 0 black);
+      }
+      .btn4.active path{
+         fill: rgba(97, 140, 163, 1);
+      }
+   }
+    /* diamond-panel */
+
+
+   
+   #character-info { 
+      position: relative;
+      display: flex;
+      margin: 5vw 10vw;
+      height: 30vw;
+      width: auto;
+   }
+   #bord {
+      position: absolute;
+      border-radius: 2vh;
+      z-index: 1;
+      left: 44vw;
+      height: 22vw;
+      width: 32vw;
+   }
+
+   #character-text{
+      font-size: 1.5vw;;
+      width: 28vw;
+      position: absolute;
+      z-index: 4;
+      left: 47vw;
+   }
+   #head-description {
+      font-size: 1.7vw;
+      margin-bottom: 0;
+   }
+   #character-image {
+      position: absolute;
+      height: 30vw;
+      left: 30vw;
+      top: -5vw;
+      z-index: 2;
+   }
+   .character4 #character-image {
+      opacity: 1;
+      left: 32vw;
+   }
+   .character1 #character-image {
+      opacity: 1;
+      left: 34vw;
+   }
+
+   #elements {
+      position: absolute;
+      z-index: 3;
+      left: 5vw;
+      height: 25vw;
+      width: auto;
+      top: -5vw;
+   }
+
+
+   .character1 #bord{
+      background-color: rgba(173, 56, 23, 1);
+   }
+   .character2 #bord{
+      background-color: rgba(97, 140, 163, 1);
+   }
+   .character3 #bord{
+      background-color: rgba(125, 121, 112, 1);
+   }
+   .character4 #bord{
+      background-color: rgba(188, 209, 172, 1);
+   }
+}
+
+
+
+
+

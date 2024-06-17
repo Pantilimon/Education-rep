@@ -1,0 +1,97 @@
+.follow_dream {
+    box-sizing: border-box;
+    background-color: #171921;
+    padding: 1px;
+  }
+  .follow_dream .containers {
+    background: 
+      linear-gradient(to bottom, rgba(23, 25, 33, 0), rgba(23, 25, 33, 1)),
+      url('../img/blocks1.png') no-repeat center center;
+    background-size: contain;
+    animation: moveBackground 3s linear infinite;
+    height: 600px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 150px;
+    padding: 10vw 90px;
+  }
+  .follow_dream .message {
+    box-sizing: border-box;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .follow_dream .message p{
+    box-sizing: border-box;
+    font-size: 30px;
+    font-weight: 40;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .follow_dream .message h1{
+    margin-bottom: 0;
+    font-size: 55px;
+    font-weight: 1;
+    margin-top: 270px; 
+  }
+  
+/* Кнопка */
+.register {
+  height: auto;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition: background-color 0.3s ease; /* Добавляем плавный переход для изменения фона */
+  padding: 10px 0px;
+  border-radius: 50px;
+  border: 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.follow_dream svg {
+  position: relative;
+  z-index: 1;
+}
+
+.register::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: top 0.3s ease;
+  z-index: 0;
+}
+
+.register:hover::after {
+  top: 0;
+}
+
+.follow_dream svg path {
+  fill: white;
+}
+
+.register:hover svg path {
+  fill: rgba(23, 25, 33, 1);
+}
+
+  @keyframes moveBackground {
+    0% {
+      background-position: 50% 50%;
+    }
+    50% {
+      background-position: 50% 52%;
+    }
+    100% {
+      background-position: 50% 50%;
+    }
+  }

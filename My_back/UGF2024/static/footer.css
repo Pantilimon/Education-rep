@@ -1,0 +1,53 @@
+/* Стили для футера */
+footer {
+    background-color: #171921;
+    color: white;
+    padding: 0 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 25px;
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 20px;
+    
+  }
+  
+  .footer-nav a {
+    color: white;
+    text-decoration: none;
+  
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .link {
+    color: white;
+    text-decoration: none;
+  
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .cop {
+    font-family: sans-serif;
+    font-size: 35px;
+  }
+
+  footer img {
+    width: 30px;
+    height: auto;
+  }
