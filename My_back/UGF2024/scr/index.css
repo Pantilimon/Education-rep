@@ -20,19 +20,19 @@
   } */
 
   @media (min-width: 1440px) {
-    html {
+    :is(html) {
       zoom: 1.5;
     }
   }
 
   @media (min-width: 2560px) {
-    html {
+    :is(html) {
       zoom: 1.7;
     }
   }
 
   @media (min-width: 3860px) {
-    html {
+    :is(html) {
       zoom: 2.5;
     }
   }
@@ -55,7 +55,7 @@
     background: #f9f9f9;
   }
 
-  body {
+  :is(body) {
     font-size: 1.6rem;
     background: var(--bg);
   }
