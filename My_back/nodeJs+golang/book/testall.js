@@ -1,41 +1,21 @@
-let promiseAll = async function(functions) {
-    let res = [];
-    let f = async function(i) {
-        // Вызываем каждую функцию и ждем ее выполнения
-        let data = await functions[i]();
-        res[i] = data; // невыполненый промис
-    };
-  
-    // Выполняем все функции параллельно
-    for (let i = 0; i < functions.length; i++) {
-        await f(i); // Ждем выполнения каждой функции перед переходом к следующей
-    }
-  
-    // теперь у нас есть массив промисов res
+/**
+ * @param {Function} fn
+ * @return {Object}
+ */
 
-
-    // Дожидаемся завершения асинхронных операций перед возвратом результата
-    let F = async function(i) {
-        try {
-            // Вызываем каждую функцию и ждем ее выполнения
-            let data = await functions[i]();
-            res[i] = data;
-        } catch (err) {
-            // Если возникла ошибка, сохраняем ее в массив результатов
-            res[i] = err;
-        }
-    };
-  
-    await new Promise((resolve, reject) => {
-        // Если результат - это массив, вызываем resolve
-        if (Array.isArray(res)) {
-            setTimeout(resolve, 0);
+Array.prototype.groupBy = function(fn) {
+    res = {}
+    for (let i of this) {
+        if (!(fn(i) in res)) {
+            res[fn(i)] = []
+            // console.log(res)
+            res[fn(i)].push(i)
         } else {
-            // Если результат - ошибка, вызываем reject
-            setTimeout(reject, 0);
+            res[fn(i)].push(i)
         }
-    });
-  
-    return res;
-  };
-  
+    }
+    return res
+};
+
+
+[1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
